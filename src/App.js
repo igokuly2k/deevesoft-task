@@ -1,26 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Form from './components/Form';
+const App = (props) => {
+  return (<div style={styles}>
+    <Header text='Sample Task'/>
+    <Form style={{alignSelf:'center'}}/>
+    <Footer justifyContent='flex-end'/>
+  </div>);
+};
+const styles = {
+  display: 'flex',
+  flex: 1,
+  flexDirection: 'column',
+  position: 'relative'
+};
 export default App;
